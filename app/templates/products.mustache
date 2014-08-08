@@ -1,0 +1,12 @@
+{{<page}}
+    {{$body}}
+        <h1>Products</h1>
+        <ul>
+            {{#collections.products}}
+                <li>
+                    <h3><a href="{{path}}">{{title}}</a></h3>
+                </li>
+            {{/collections.products}}
+        </ul>
+    {{/body}}
+{{/page}}

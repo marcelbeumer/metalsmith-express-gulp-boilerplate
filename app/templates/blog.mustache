@@ -1,0 +1,13 @@
+{{<page}}
+    {{$body}}
+        <h1>Blog</h1>
+        <ul>
+            {{#collections.posts}}
+                <li>
+                    <h3><a href="{{path}}">{{title}}</a></h3>
+                    <article>{{{description}}}</article>
+                </li>
+            {{/collections.posts}}
+        </ul>
+    {{/body}}
+{{/page}}

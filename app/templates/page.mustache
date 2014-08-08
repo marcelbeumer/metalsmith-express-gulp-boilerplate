@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/client/style.css"/>
+</head>
+<body>
+    {{> header}}
+    {{$body}}
+        {{{ contents }}}
+    {{/body}}
+</body>
+</html>
