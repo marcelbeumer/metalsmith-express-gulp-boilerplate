@@ -88,6 +88,16 @@ gulp.task('scripts', function(done) {
 });
 
 
+gulp.task('app-clean', function() {
+  return gulp.src([
+      './dist/content-build',
+      './dist/content',
+      './dist/templates',
+      './dist/public'])
+    .pipe(rimraf());
+});
+
+
 gulp.task('app-copy', function() {
   var types = ['content', 'templates', 'public'];
   return merge.apply(merge, types.map(function(type) {
@@ -115,7 +125,7 @@ gulp.task('app-build', function(done) {
 
 
 gulp.task('app', function(done) {
-  return sequence('app-copy', 'app-build', done);
+  return sequence('app-clean', 'app-copy', 'app-build', done);
 });
 
 

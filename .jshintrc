@@ -3,7 +3,6 @@
   "camelcase" : true,
   "eqeqeq": true,
   "unused": true,
-  "indent": 2,
   "latedef": true,
   "undef": true,
   "maxlen": 80,
