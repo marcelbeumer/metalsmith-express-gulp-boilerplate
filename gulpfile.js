@@ -125,8 +125,10 @@ gulp.task('watch-app-changes', function(done) {
 
 
 gulp.task('watch-watchers', function(done) {
-  gulp.watch('./app/**/*.scss', ['css']);
-  gulp.watch(['./app/**', '!./app/**/*.scss'], ['watch-app-changes']);
+  // not starting paths with . because of issue in gaze:
+  // https://github.com/shama/gaze/issues/66
+  gulp.watch('app/**/*.scss', ['css']);
+  gulp.watch(['app/**', '!./app/**/*.scss'], ['watch-app-changes']);
   done();
 });
 
